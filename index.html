@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        * {
+            font-size: 14px;
+            margin: 0px;
+            padding: 0px;
+            text-decoration: none;
+        }
+        ul {
+            list-style: none;
+        }
+        .li-titles {
+            margin: 0px;
+            padding: 0px;
+            font-size: small;
+            display: flex;
+            width: 100%;
+            justify-content: start;
+            
+        }
+        .li-titles > p {
+            margin-bottom: 2px ;
+            color: rgb(0, 221, 221);
+        }
+
+        #div-ul {
+            /* flex: 2; */
+            flex-grow: 2;
+            list-style: none;
+            min-width: 180px;
+
+        }
+        #div-main {
+            display: flex;
+            flex-direction: row-reverse;
+            width: 70%;
+            min-width: 380px;
+            margin: 30px auto;
+            
+        }
+        #formu {
+            box-shadow: 5px 5px 20px -10px black;
+            margin: 0px 40px;
+            border: 1px solid #ededed;
+            width: 10%;
+            min-width: 170px;
+            height: 250px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        #formu > div {
+            margin: auto;
+        }#formu > div > input {
+            border: none;
+            border-bottom: 1px solid;
+        }
+        .inps{
+            margin-top: 5px;
+        }
+        .inps:focus {
+            background-color: rgb(0, 221, 221);
+            border: none;
+        }
+        .row {
+            color: black;
+            background: #ededed;
+            border-bottom: 1px solid white;
+            width: 100%;
+            display: flex;
+            justify-content: start;
+        }
+        .row:hover {
+            background: black;
+            color: white;
+        }
+        .row:focus {
+            background: black;
+            color: white;
+        }
+        .p-num {
+            flex: 1;
+            flex-grow: 2;
+        }
+        .p-name {
+            flex: 2;
+            flex-grow: 3;
+            
+        }
+        .p-surname {
+            flex: 3;
+        }
+        .pt1{
+            width: 25%;
+        }
+        .pt2{
+            width: 37%;
+        }
+        .pt3{
+            width: 5%;
+        }
+        .div-inp {
+            width: 70%;
+            display: flex;
+            flex-direction: column;
+        }
+        .div-inp > label {
+            color: rgb(0, 192, 192);
+        }
+        .div-btns > button{
+            cursor: pointer;
+            width: 60px;
+            margin: 0px 10px;
+            background-color: rgb(0, 0, 0);
+            border-radius: 20px;
+            color: white;
+        }
+        .div-btns > button:hover{
+            background: rgb(0, 192, 192);
+            color: black;
+        }
+        .row-line{
+            margin-bottom: 5px;
+        }
+        #hidden-div{
+            display: none;
+        }
+        img {
+            position: absolute;
+            left: 86%;
+            width: 20px;
+            /* background: rgb(0, 192, 192); */
+        }
+        img:hover {
+            background:rgb(0, 192, 192);
+            border-radius: 20px;
+        }
+
+
+        @media all and (max-width: 400px) {
+            #div-main {
+                flex-direction: column-reverse;
+                gap: 30px;
+            }
+            #div-ul {
+                width: 50%;
+                margin: auto;
+            }
+            #formu{
+                width: 50%;
+                margin: auto;
+
+            }
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div-main">
+        <div id="div-ul">
+            <ul>
+                <li class="li-titles">
+                    <p class="pt1">Id</p>
+                    <p class="pt2">Name</p>
+                    <p class="pt3">Surname</p>
+
+                </li>
+                <div id="div-rows">
+                    <!-- <li class="row-line">
+                        <a href="#" class="row">
+                            <p class="p-num">01</p>
+                            <p class="p-name">Arol</p>
+                            <p class="p-surname">Alonso</p>
+                        </a>
+                    </li>
+                    <li class="row-line">
+                        <a href="#" class="row">
+                            <p class="p-num">02</p>
+                            <p class="p-name">Victor</p>
+                            <p class="p-surname">Farias</p>
+                        </a>
+                    </li>
+                    <li class="row-line">
+                        <a href="#" class="row">
+                            <p class="p-num">03</p>
+                            <p class="p-name">Carlos</p>
+                            <p class="p-surname">Gomez</p>
+                        </a>
+                    </li>
+                    <li class="row-line">
+                        <a href="#" class="row">
+                            <p class="p-num">04</p>
+                            <p class="p-name">Marcos</p>
+                            <p class="p-surname">Rojo</p>
+                        </a>
+                    </li>
+                    <li class="row-line">
+                        <a href="#" class="row">
+                            <p class="p-num">05</p>
+                            <p class="p-name">David</p>
+                            <p class="p-surname">Luna</p>
+                        </a>
+                    </li> -->
+                    
+                </div>
+            </ul>
+        </div>
+        <div id="formu">
+            <div class="div-inp">
+                <label for="inp-name">name</label>
+                <input type="text" class="inps inp-name" id="inp-name" autocomplete="off">
+            </div>
+            <div class="div-inp">
+                <label for="inp-surname">surname</label>
+                <input type="text" class="inps inp-surname" id="inp-surname" autocomplete="off">
+            </div>
+            <div class="div-inp">
+                <label for="inp-year">years</label>
+                <input type="text" class="inps inp-year" id="inp-year" autocomplete="off">
+            </div>
+            <div class="div-btns" id="block-div">
+                <button class="btn" id="btn-add">add</button>
+                <button class="btn" id="btn-clean">clean</button>
+            </div>
+            <div class="div-btns" id="hidden-div">
+                <button class="btn" id="btn-edit">edit</button>
+                <button class="btn" id="btn-cancel">cancel</button>
+            </div>
+        </div>
+    </div>
+    
+
+    <!-- <script src="./controller.js" type="module"></script> -->
+    <script src="./app.js" type="module">
+        
+
+        // btn.addEventListener('click', e => {
+        //     e.preventDefault()
+        //     name.readOnly = false
+        //     surname.readOnly = false
+        //     year.readOnly = false
+            
+        // })
+
+        // formu.addEventListener('keypress', e => {
+        //     e.preventDefault()
+        //     if(e.keyCode == 13){
+        //         name.disabled = false
+        //     }
+        // })
+        // formu.addEventListener('keydown', e => {
+        //     console.log(e.keyCode)
+        //     if(e.keyCode == 40){
+        //         if(e.target == btn[0]){
+        //             formu.firstElementChild.focus()
+        //         }
+        //         else{
+        //             e.target.nextElementSibling.focus()
+        //         }
+        //     }
+        //     else if(e.keyCode == 38){
+        //         if (e.target == name[0]) {
+        //             formu.lastElementChild.focus()
+        //         }
+        //         else {
+        //             e.target.previousElementSibling.focus()
+        //         }
+
+        //     }
+        // })
+        </script>
+</body>
+</html>

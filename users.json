@@ -1,0 +1,46 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "nombre": "Claudio",
+      "apellido": "Torres",
+      "edad": "28"
+    },
+    {
+      "id": 2,
+      "nombre": "Arol",
+      "apellido": "Alonso",
+      "edad": "35"
+    },
+    {
+      "id": 3,
+      "nombre": "Victor",
+      "apellido": "Farias",
+      "edad": "23"
+    },
+    {
+      "id": 4,
+      "nombre": "Sebastian",
+      "apellido": "Carrizo",
+      "edad": "30"
+    },
+    {
+      "id": 5,
+      "nombre": "Marcos",
+      "apellido": "Rojo",
+      "edad": "40"
+    },
+    {
+      "id": 6,
+      "nombre": "Sergio",
+      "apellido": "Paredes",
+      "edad": "23"
+    }
+  ],
+  "currentID": [
+    {
+      "id": 1,
+      "newId": 7
+    }
+  ]
+}
